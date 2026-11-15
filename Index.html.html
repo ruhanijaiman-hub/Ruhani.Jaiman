@@ -1,0 +1,553 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Ruhani Jaiman · Portfolio</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#F5F1E8; --surface:#FFFDF7; --ink:#0F3D3E; --muted:#4F6B6B; --accent:#A38B3C; --line:#DDD5C0; --soft:#EAE3D0;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#0C2A2B; --surface:#133637; --ink:#F1ECDD; --muted:#B5C2BD; --accent:#D2B85E; --line:#24504F; --soft:#1A4345; color-scheme: dark; }
+}
+:root[data-theme="dark"]{ --bg:#0C2A2B; --surface:#133637; --ink:#F1ECDD; --muted:#B5C2BD; --accent:#D2B85E; --line:#24504F; --soft:#1A4345; color-scheme: dark; }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Inter,system-ui,sans-serif;padding-inline:max(16px, env(safe-area-inset-left,0px)) max(16px, env(safe-area-inset-right,0px));overflow-x:hidden}
+img{max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.15;margin:0;text-wrap:balance}
+p{margin:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto}
+section{padding-block:96px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.section-head{margin-bottom:48px}
+.section-head h2{font-size:clamp(28px,4vw,40px);margin-top:10px}
+.section-head p{color:var(--muted);max-width:60ch;margin-top:12px}
+
+/* nav */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{font-family:"Space Grotesk",sans-serif;font-weight:700;text-decoration:none;font-size:17px}
+.brand span{color:var(--accent)}
+.links{display:flex;gap:6px;flex-wrap:wrap}
+.links a{text-decoration:none;font-size:14px;font-weight:500;padding:8px 12px;border-radius:999px;color:var(--muted);transition:background .2s,color .2s}
+.links a:hover,.links a.active{background:var(--soft);color:var(--ink)}
+.theme-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 12px;font:500 13px Inter,sans-serif;cursor:pointer;min-height:40px}
+.theme-btn:hover{border-color:var(--accent)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font:600 15px Inter,sans-serif;text-decoration:none;cursor:pointer;border:1px solid var(--ink);transition:transform .2s,box-shadow .2s,background .2s;min-height:48px}
+.btn-primary{background:var(--ink);color:var(--bg)}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -12px var(--ink)}
+.btn:active{transform:translateY(0)}
+
+/* hero */
+.hero{padding-top:88px;padding-bottom:72px}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(44px,7vw,76px);letter-spacing:-.02em}
+.hero .role{font-size:clamp(17px,2vw,20px);color:var(--accent);font-weight:600;margin-top:18px}
+.hero .bio{color:var(--muted);font-size:17px;margin-top:18px;max-width:52ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;display:grid;gap:18px}
+.stat{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:14px}
+.stat:last-child{border-bottom:0;padding-bottom:0}
+.stat b{font-family:"Space Grotesk",sans-serif;font-size:15px}
+.stat span{color:var(--muted);font-size:14px;text-align:right}
+.pill-live{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.pill-live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 25%,transparent)}
+
+/* academics timeline */
+.timeline{position:relative;display:grid;gap:20px;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.tl-item{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px 26px;transition:transform .25s,border-color .25s}
+.tl-item::before{content:"";position:absolute;left:-27px;top:30px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl-item.current::before{background:var(--accent)}
+.tl-item:hover{transform:translateX(4px);border-color:var(--accent)}
+.tl-item .when{font-size:13px;color:var(--accent);font-weight:600}
+.tl-item h3{font-size:20px;margin-top:6px}
+.tl-item .school{color:var(--muted);margin-top:4px}
+.tl-item .status{display:inline-block;margin-top:12px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--soft)}
+
+/* skills */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.filter{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:8px 14px;font:500 14px Inter,sans-serif;cursor:pointer;min-height:40px;transition:all .2s}
+.filter:hover{color:var(--ink);border-color:var(--accent)}
+.filter[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.skill-group{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;transition:opacity .3s,transform .3s}
+.skill-group.dim{opacity:.35}
+.skill-group h3{font-size:17px;margin-bottom:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:14px;padding:7px 13px;border-radius:999px;background:var(--soft);color:var(--ink);border:1px solid transparent;cursor:default;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.tag:hover{background:var(--ink);color:var(--bg);transform:translateY(-2px)}
+
+/* projects */
+.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.project:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px var(--ink);border-color:var(--accent)}
+.project .kind{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.project h3{font-size:21px}
+.project p.short{color:var(--muted)}
+.project .actions{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
+.project .btn{padding:10px 16px;min-height:42px;font-size:14px}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(8,20,21,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:100}
+.modal.open{display:flex}
+.modal-box{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:22px;max-width:640px;width:100%;max-height:86vh;overflow:auto;padding:32px;position:relative;animation:pop .25s ease}
+@keyframes pop{from{transform:translateY(12px);opacity:0}to{transform:none;opacity:1}}
+.modal-box h3{font-size:26px;margin-bottom:8px}
+.modal-box .kind{color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.modal-box p{color:var(--muted);margin-top:14px}
+.modal-close{position:absolute;top:14px;right:14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:18px}
+.modal-close:hover{border-color:var(--accent)}
+
+/* coursework accordion */
+.acc{margin-top:48px}
+.acc details{border-bottom:1px solid var(--line);padding:18px 0}
+.acc summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;font:600 18px "Space Grotesk",sans-serif;min-height:44px}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"+";font-size:24px;color:var(--accent);transition:transform .25s}
+.acc details[open] summary::after{transform:rotate(45deg)}
+.acc details p{color:var(--muted);margin-top:12px;max-width:70ch}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:start}
+.contact-card{background:var(--ink);color:var(--bg);border-radius:24px;padding:36px;display:grid;gap:22px}
+.contact-card h3{font-size:24px}
+.contact-card p{color:color-mix(in srgb,var(--bg) 75%,transparent)}
+.contact-row{display:flex;justify-content:space-between;gap:12px;align-items:center;border-top:1px solid color-mix(in srgb,var(--bg) 20%,transparent);padding-top:16px;flex-wrap:wrap}
+.contact-row a,.contact-row span{font-weight:500}
+.contact-row a{text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--bg) 40%,transparent)}
+.copy{border:1px solid color-mix(in srgb,var(--bg) 40%,transparent);background:transparent;color:var(--bg);border-radius:999px;padding:6px 12px;font:500 13px Inter,sans-serif;cursor:pointer;min-height:36px}
+form.msg{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:36px;display:grid;gap:18px}
+.field{display:grid;gap:6px}
+.field label{font-size:14px;font-weight:600}
+.field input,.field textarea{font:400 16px Inter,sans-serif;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:13px 14px;min-height:48px;width:100%}
+.field textarea{min-height:130px;resize:vertical}
+.field input:focus,.field textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+.field .err{font-size:13px;color:#B3261E;min-height:18px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,140%);background:var(--ink);color:var(--bg);padding:14px 22px;border-radius:14px;font-weight:500;box-shadow:0 16px 40px -16px var(--ink);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:120;max-width:calc(100% - 32px)}
+.toast.show{transform:translate(-50%,0)}
+
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* content is always visible; the reveal is only a hover/motion nicety */
+.reveal{transition:opacity .6s ease,transform .6s ease}
+
+@media (max-width:900px){
+  .hero-grid,.contact-grid{grid-template-columns:1fr}
+  section{padding-block:72px}
+}
+@media (max-width:640px){
+  .nav-inner{height:auto;padding-block:12px;flex-wrap:wrap}
+  .links{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
+  .links a{white-space:nowrap}
+  .hero{padding-top:56px}
+  .project .btn{flex:1 1 auto;justify-content:center}
+  form.msg,.contact-card{padding:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#intro">Ruhani<span>.</span>Jaiman</a>
+    <nav class="links" aria-label="Primary">
+      <a href="#intro" class="nl">Intro</a>
+      <a href="#academics" class="nl">Academics</a>
+      <a href="#skills" class="nl">Skills</a>
+      <a href="#projects" class="nl">Projects</a>
+      <a href="#connect" class="nl">Connect</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle colour theme">Dark mode</button>
+  </div>
+</header>
+
+<main>
+<!-- INTRO -->
+<section id="intro" class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <p class="eyebrow">TAPMI Bengaluru · BBA (Hons.)</p>
+      <h1 style="margin-top:14px">Ruhani Jaiman</h1>
+      <p class="role">First-Year BBA (Hons.) Student at TAPMI Bengaluru | Business Analytics, Finance &amp; AI Enthusiast</p>
+      <p class="bio">A driven management undergraduate blending business fundamentals with data visualization, financial accounting, and emerging AI technologies.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#projects">Explore My Work →</a>
+        <a class="btn btn-ghost" href="#connect">Connect With Me</a>
+      </div>
+    </div>
+    <aside class="hero-card reveal" aria-label="Quick facts">
+      <p class="pill-live">Currently: 1st year, BBA (Hons.)</p>
+      <div class="stat"><b>Focus</b><span>Business analytics &amp; finance</span></div>
+      <div class="stat"><b>Interest</b><span>AI in management &amp; creativity</span></div>
+      <div class="stat"><b>Tools</b><span>Power BI, accounting, research methods</span></div>
+      <div class="stat"><b>Based in</b><span>Bengaluru, India</span></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ACADEMICS -->
+<section id="academics">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Education</p>
+      <h2>Academic journey</h2>
+    </div>
+    <ol class="timeline" style="list-style:none;margin:0">
+      <li class="tl-item current reveal">
+        <p class="when">Present</p>
+        <h3>Bachelor of Business Administration (BBA Hons.)</h3>
+        <p class="school">T. A. Pai Management Institute (TAPMI), Bengaluru</p>
+        <span class="status">1st Year · In progress</span>
+      </li>
+      <li class="tl-item reveal">
+        <p class="when">Class 12</p>
+        <h3>Senior Secondary</h3>
+        <p class="school">Presidency School</p>
+        <span class="status">Completed</span>
+      </li>
+      <li class="tl-item reveal">
+        <p class="when">Up to Class 10</p>
+        <h3>Secondary School</h3>
+        <p class="school">Vibgyor High</p>
+        <span class="status">Completed</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Capabilities</p>
+      <h2>Skills</h2>
+      <p>Select a category to focus on it, or select again to show everything.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter skills">
+      <button class="filter" aria-pressed="false" data-filter="data">Data &amp; Analytics</button>
+      <button class="filter" aria-pressed="false" data-filter="finance">Finance &amp; Accounting</button>
+      <button class="filter" aria-pressed="false" data-filter="tech">Technology &amp; AI</button>
+      <button class="filter" aria-pressed="false" data-filter="research">Research &amp; Communication</button>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-group reveal" data-cat="data">
+        <h3>Data &amp; Analytics</h3>
+        <div class="tags"><span class="tag">Microsoft Power BI</span><span class="tag">Dashboard Design</span><span class="tag">Business Mathematics</span></div>
+      </div>
+      <div class="skill-group reveal" data-cat="finance">
+        <h3>Finance &amp; Accounting</h3>
+        <div class="tags"><span class="tag">Full Accounting Cycle</span><span class="tag">Financial Statement Analysis</span><span class="tag">Corporate Valuation Basics</span></div>
+      </div>
+      <div class="skill-group reveal" data-cat="tech">
+        <h3>Technology &amp; AI</h3>
+        <div class="tags"><span class="tag">AI Agent Development</span><span class="tag">Prompt Engineering</span><span class="tag">Technology Literacy for Managers</span></div>
+      </div>
+      <div class="skill-group reveal" data-cat="research">
+        <h3>Research &amp; Communication</h3>
+        <div class="tags"><span class="tag">Ethnographic Research</span><span class="tag">Rhetoric &amp; Business Communication</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Selected work</p>
+      <h2>Projects &amp; coursework</h2>
+      <p>Open any card for the full write-up. Resource links are placeholders until the folders are added.</p>
+    </div>
+    <div class="project-grid" id="projectGrid">
+  <article class="project">
+    <p class="kind">Technology Literacy for Managers</p>
+    <h3>AI Agent Development</h3>
+    <p class="short">Designed and configured a functional AI agent to streamline managerial workflows and automate task execution.</p>
+    <div class="actions">
+      <button class="btn btn-ghost" type="button" onclick="openModal(0,this)">View Details</button>
+      <a class="btn btn-primary" href="#" target="_blank" rel="noopener">View Project Drive ↗</a>
+    </div>
+  </article>
+  <article class="project">
+    <p class="kind">Diversity, Inclusivity &amp; Rootedness</p>
+    <h3>Ethnographic Study: AI and Art</h3>
+    <p class="short">A qualitative study of how generative AI affects creativity, cultural authenticity and artist identity.</p>
+    <div class="actions">
+      <button class="btn btn-ghost" type="button" onclick="openModal(1,this)">View Details</button>
+      <a class="btn btn-primary" href="#" target="_blank" rel="noopener">View Research Drive ↗</a>
+    </div>
+  </article>
+  <article class="project">
+    <p class="kind">Power BI</p>
+    <h3>Multi-Branch Cafe Analytics Dashboard</h3>
+    <p class="short">A 3-page business intelligence dashboard covering KPIs, branch revenue, footfall and product profitability.</p>
+    <div class="actions">
+      <button class="btn btn-ghost" type="button" onclick="openModal(2,this)">View Details</button>
+      <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1DfJUE38eC5pYAXGEKIGdD0FTesM01i3U?usp=drive_link" target="_blank" rel="noopener">View Power BI Folder ↗</a>
+    </div>
+  </article>
+  <article class="project">
+    <p class="kind">Financial Accounting</p>
+    <h3>Nifty 100 Financial Analysis: Samvardhana Motherson</h3>
+    <p class="short">End-to-end accounting cycle for a Nifty 100 auto components company, from journals to balance sheet.</p>
+    <div class="actions">
+      <button class="btn btn-ghost" type="button" onclick="openModal(3,this)">View Details</button>
+      <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1vVZbJQ0mzGTSxvFAcNnoHrHHOoNUTVE0?usp=drive_link" target="_blank" rel="noopener">View Accounts Folder ↗</a>
+    </div>
+  </article>
+  <article class="project">
+    <p class="kind">Language, Literature &amp; Rhetoric</p>
+    <h3>Language, Literature &amp; Rhetoric Portfolio</h3>
+    <p class="short">Rhetorical analyses, persuasive frameworks and literary evaluations that sharpen executive communication.</p>
+    <div class="actions">
+      <button class="btn btn-ghost" type="button" onclick="openModal(4,this)">View Details</button>
+      <a class="btn btn-primary" href="#" target="_blank" rel="noopener">View Coursework Drive ↗</a>
+    </div>
+  </article>
+  <article class="project">
+    <p class="kind">Business Mathematics</p>
+    <h3>Business Mathematics Applications</h3>
+    <p class="short">Quantitative models for business optimisation, financial calculations and managerial decisions.</p>
+    <div class="actions">
+      <button class="btn btn-ghost" type="button" onclick="openModal(5,this)">View Details</button>
+      <a class="btn btn-primary" href="#" target="_blank" rel="noopener">View Coursework Drive ↗</a>
+    </div>
+  </article>
+</div>
+
+    <div class="acc reveal">
+      <p class="eyebrow" style="margin-bottom:12px">Coursework detail</p>
+      <details>
+        <summary>Nifty 100 Financial Analysis: Samvardhana Motherson</summary>
+        <p>Executed a comprehensive financial analysis of Samvardhana Motherson (a Nifty 100 listed automotive components giant). Constructed the complete end-to-end accounting cycle from scratch, including Journal entries, Ledger postings, Trial Balance, Income Statement, and Balance Sheet, to evaluate financial health.</p>
+      </details>
+      <details>
+        <summary>Multi-Branch Cafe Analytics Dashboard (Power BI)</summary>
+        <p>Engineered an interactive, 3-page Power BI business intelligence dashboard for a multi-branch cafe chain. Visualized key performance indicators (KPIs), branch-wise revenue comparisons, customer footfall trends, and product profitability to support data-driven operational decisions.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT -->
+<section id="connect" style="padding-top:0">
+  <div class="wrap contact-grid">
+    <div class="contact-card reveal">
+      <p class="eyebrow" style="color:color-mix(in srgb,var(--bg) 70%,transparent)">Connect</p>
+      <h3>Let's talk business, data and AI.</h3>
+      <p>Open to conversations about analytics, finance, and emerging technology in management.</p>
+      <div class="contact-row"><span>Email</span><span id="emailText">Ruhani.jaiman@gmail.com</span><button class="copy" data-copy="Ruhani.jaiman@gmail.com">Copy</button></div>
+      <div class="contact-row"><span>Phone</span><span id="phoneText">+91 7619261345</span><button class="copy" data-copy="+91 7619261345">Copy</button></div>
+      <div class="contact-row"><span>Location</span><span>Bengaluru, India</span></div>
+    </div>
+
+    <form class="msg reveal" id="contactForm" novalidate>
+      <h3 style="font-family:'Space Grotesk',sans-serif;font-size:22px">Send a message</h3>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" autocomplete="name" placeholder="Your name">
+        <span class="err" id="nameErr"></span>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+        <span class="err" id="emailErr"></span>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="What would you like to discuss?"></textarea>
+        <span class="err" id="msgErr"></span>
+      </div>
+      <button class="btn btn-primary" type="submit" style="justify-self:start">Send message</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Ruhani Jaiman</span>
+    <span>Built for TAPMI Bengaluru · BBA (Hons.)</span>
+  </div>
+</footer>
+
+<!-- project modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close details">×</button>
+    <p class="kind" id="modalKind"></p>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <div style="margin-top:22px"><a class="btn btn-primary" id="modalLink" href="#" target="_blank" rel="noopener">Open resource</a></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const PROJECTS = [
+  {kind:"Technology Literacy for Managers", title:"AI Agent Development",
+   short:"Designed and configured a functional AI agent to streamline managerial workflows and automate task execution.",
+   full:"Designed and configured a functional AI agent aimed at streamlining managerial workflows and automating task execution, demonstrating practical applications of artificial intelligence in modern business operations.",
+   link:"#", linkLabel:"View Project Drive"},
+  {kind:"Diversity, Inclusivity & Rootedness", title:"Ethnographic Study: AI and Art",
+   short:"A qualitative study of how generative AI affects creativity, cultural authenticity and artist identity.",
+   full:"Conducted an in-depth qualitative ethnographic research study exploring the intersection of artificial intelligence and artistic expression. Examined how generative AI impacts human creativity, cultural authenticity, artist identity, and audience perception in contemporary creative spaces.",
+   link:"#", linkLabel:"View Research Drive"},
+  {kind:"Power BI", title:"Multi-Branch Cafe Analytics Dashboard",
+   short:"A 3-page business intelligence dashboard covering KPIs, branch revenue, footfall and product profitability.",
+   full:"Engineered an interactive, 3-page Power BI business intelligence dashboard for a multi-branch cafe chain. Visualized key performance indicators (KPIs), branch-wise revenue comparisons, customer footfall trends, and product profitability to support data-driven operational decisions.",
+   link:"https://drive.google.com/drive/folders/1DfJUE38eC5pYAXGEKIGdD0FTesM01i3U?usp=drive_link", linkLabel:"View Power BI Folder"},
+  {kind:"Financial Accounting", title:"Nifty 100 Financial Analysis: Samvardhana Motherson",
+   short:"End-to-end accounting cycle for a Nifty 100 auto components company, from journals to balance sheet.",
+   full:"Executed a comprehensive financial analysis of Samvardhana Motherson (a Nifty 100 listed automotive components giant). Constructed the complete end-to-end accounting cycle from scratch, including Journal entries, Ledger postings, Trial Balance, Income Statement, and Balance Sheet, to evaluate financial health.",
+   link:"https://drive.google.com/drive/folders/1vVZbJQ0mzGTSxvFAcNnoHrHHOoNUTVE0?usp=drive_link", linkLabel:"View Accounts Folder"},
+  {kind:"Language, Literature & Rhetoric", title:"Language, Literature & Rhetoric Portfolio",
+   short:"Rhetorical analyses, persuasive frameworks and literary evaluations that sharpen executive communication.",
+   full:"A curated collection of rhetorical analyses, persuasive communication frameworks, and literary evaluations developed to sharpen executive communication and critical thinking.",
+   link:"#", linkLabel:"View Coursework Drive"},
+  {kind:"Business Mathematics", title:"Business Mathematics Applications",
+   short:"Quantitative models for business optimisation, financial calculations and managerial decisions.",
+   full:"Quantitative problem-solving models and mathematical frameworks applied to business optimization, financial calculations, and managerial decision-making.",
+   link:"#", linkLabel:"View Coursework Drive"}
+];
+
+const grid = null; /* cards are now static HTML */
+const modal = document.getElementById('modal');
+let lastFocus = null;
+if (grid) PROJECTS.forEach((p, i) => {
+  const card = document.createElement('article');
+  card.className = 'project reveal';
+  card.innerHTML = `<p class="kind"></p><h3></h3><p class="short"></p><div class="actions"></div>`;
+  card.querySelector('.kind').textContent = p.kind;
+  card.querySelector('h3').textContent = p.title;
+  card.querySelector('.short').textContent = p.short;
+  const actions = card.querySelector('.actions');
+  const det = document.createElement('button');
+  det.className = 'btn btn-ghost'; det.type = 'button';
+  det.textContent = 'View Details';
+  det.addEventListener('click', () => openModal(i, det));
+  actions.appendChild(det);
+  if (p.link) {
+    const a = document.createElement('a');
+    a.className = 'btn btn-primary'; a.href = p.link; a.target = '_blank'; a.rel = 'noopener';
+    a.textContent = p.linkLabel + ' ↗';
+    actions.appendChild(a);
+  }
+  grid.appendChild(card);
+});
+
+function openModal(i, trigger) {
+  const p = PROJECTS[i];
+  lastFocus = trigger;
+  document.getElementById('modalKind').textContent = p.kind;
+  document.getElementById('modalTitle').textContent = p.title;
+  document.getElementById('modalDesc').textContent = p.full;
+  const ml = document.getElementById('modalLink');
+  if (p.link) { ml.hidden = false; ml.href = p.link; ml.textContent = p.linkLabel; } else { ml.hidden = true; }
+  modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false');
+  document.getElementById('modalClose').focus();
+}
+function closeModal() {
+  modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true');
+  if (lastFocus) lastFocus.focus();
+}
+document.getElementById('modalClose').addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+
+// skill filters
+const filters = document.querySelectorAll('.filter');
+const groups = document.querySelectorAll('.skill-group');
+filters.forEach(btn => btn.addEventListener('click', () => {
+  const pressed = btn.getAttribute('aria-pressed') === 'true';
+  filters.forEach(b => b.setAttribute('aria-pressed', 'false'));
+  if (pressed) {
+    groups.forEach(g => g.classList.remove('dim'));
+  } else {
+    btn.setAttribute('aria-pressed', 'true');
+    groups.forEach(g => g.classList.toggle('dim', g.dataset.cat !== btn.dataset.filter));
+  }
+}));
+
+// copy buttons
+document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(b.dataset.copy); toast('Copied to clipboard'); }
+  catch (_) { toast('Select the text to copy it'); }
+}));
+
+// contact form
+const form = document.getElementById('contactForm');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const name = form.name.value.trim(), email = form.email.value.trim(), msg = form.message.value.trim();
+  const nameErr = document.getElementById('nameErr'), emailErr = document.getElementById('emailErr'), msgErr = document.getElementById('msgErr');
+  nameErr.textContent = name ? '' : 'Please enter your name.';
+  emailErr.textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? '' : 'Please enter a valid email address.';
+  msgErr.textContent = msg.length >= 10 ? '' : 'Please write at least 10 characters.';
+  if (nameErr.textContent || emailErr.textContent || msgErr.textContent) return;
+  form.reset();
+  toast('Thanks ' + name.split(' ')[0] + ', your message is ready to send.');
+});
+
+let toastTimer;
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 3200);
+}
+
+// theme toggle
+const root = document.documentElement, themeBtn = document.getElementById('themeBtn');
+function currentDark() {
+  const explicit = root.getAttribute('data-theme');
+  if (explicit) return explicit === 'dark';
+  return matchMedia('(prefers-color-scheme: dark)').matches;
+}
+function syncThemeLabel() { themeBtn.textContent = currentDark() ? 'Light mode' : 'Dark mode'; }
+themeBtn.addEventListener('click', () => {
+  root.setAttribute('data-theme', currentDark() ? 'light' : 'dark');
+  syncThemeLabel();
+});
+syncThemeLabel();
+
+// scroll-spy and reveal
+const navLinks = document.querySelectorAll('.nl');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (en.isIntersecting) {
+      en.target.classList.add('in');
+      const id = en.target.id;
+      navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+document.querySelectorAll('section[id]').forEach(s => io.observe(s));
+
+// placeholder links: keep them harmless until real URLs are added
+document.querySelectorAll('a[href="#"]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); toast('Add the real link in the page source.'); }));
+</script>
+</body>
+</html>
+
+</body></html>
